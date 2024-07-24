@@ -1,16 +1,9 @@
 -- Use the alx_book_store database
 USE alx_book_store;
 
--- Query the information_schema to get the full description of the books table
-SELECT 
-    COLUMN_NAME, 
-    COLUMN_TYPE, 
-    IS_NULLABLE, 
-    COLUMN_KEY, 
-    COLUMN_DEFAULT, 
-    EXTRA 
-FROM 
-    INFORMATION_SCHEMA.COLUMNS 
-WHERE 
-    TABLE_SCHEMA = 'alx_book_store' 
-    AND TABLE_NAME = 'Books';
+-- Insert multiple rows into the customer table
+INSERT INTO customer (customer_id, customer_name, email, address)
+VALUES 
+    (2, 'Blessing Malik', 'bmalik@sandtech.com', '124 Happiness Ave.'),
+    (3, 'Obed Ehoneah', 'eobed@sandtech.com', '125 Happiness Ave.'),
+    (4, 'Nehemial Kamolu', 'nkamolu@sandtech.com', '126 Happiness Ave.');
